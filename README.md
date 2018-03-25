@@ -4,28 +4,28 @@ Easy way to use REST-Template in Spring-Boot application to Consume Webservice w
 
 
 Steps:
- 1. Decalare RestTemplate --- RestTemplate restTemplate = new RestTemplate();
- 2. Create object of ResponseEntity --- ResponseEntity<ResponseList> response;
- 3. Create HttpHeaders --- HttpHeaders headers = new HttpHeaders();
- 4. Now set contentType, Authorization ---
+ 1. Declare RestTemplate ---> RestTemplate restTemplate = new RestTemplate();
+ 2. Create object of ResponseEntity ---> ResponseEntity<ResponseList> response;
+ 3. Create HttpHeaders ---> HttpHeaders headers = new HttpHeaders();
+ 4. Now set contentType, Authorization --->
  
       headers.setContentType(MediaType.APPLICATION_JSON);
       headers.add("Accept", "application/json");
       headers.set("Authorization","Basic " + new String(Base64.encodeBase64(userAndPass.getBytes(Charset.forName("US-ASCII"))))); 
       
-      userAndPass is what you have declare as username and password (eg: String userAndPass = "xyz:xyz123";)
+      *userAndPass is what you have declare as username and password (eg: String userAndPass = "xyz:xyz123";)
  
- 5. Create HttpEntity --- HttpEntity<String> requestEntity = new HttpEntity<>("Headers", headers);
- 6. Call webservice using RestTemplate --- response = this.restTemplate.exchange(url, HttpMethod.GET, requestEntity, ResponseList.class);  
- 7. Get responseBody --- ResponseList responseList = response.getBody();
+ 5. Create HttpEntity ---> HttpEntity<String> requestEntity = new HttpEntity<>("Headers", headers);
+ 6. Call webservice using RestTemplate ---> response = this.restTemplate.exchange(url, HttpMethod.GET, requestEntity, ResponseList.class);  
+ 7. Get responseBody ---> ResponseList responseList = response.getBody();
 
 
- ResponseList -> It is a POJO class where you have structured your response according to the JSON response from webservice.
+ *ResponseList -> It is a POJO class where you have structured your response according to the JSON response from webservice.
  
- This is how you can enjoy consuming Webservice in Spring-boot application using Rest-Template.
+ "This is how you can enjoy consuming Webservice in Spring-boot application using Rest-Template."
  
  
- Code Snippet for REST-Template example:
+ *Code Snippet for REST-Template example:
  
 	public List<TO> consumeWS() {
 
@@ -50,5 +50,5 @@ Steps:
   
   
    
- Upload, Download, HTTPS calls will be in the next articles :)
+ *Upload, Download, HTTPS calls will be in the next articles :)
  

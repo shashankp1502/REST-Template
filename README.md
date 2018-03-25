@@ -5,7 +5,7 @@ Easy way to use REST-Template in Spring-Boot application to Consume Webservice w
 
 Steps:
  1. Declare RestTemplate ---> RestTemplate restTemplate = new RestTemplate();
- 2. Create object of ResponseEntity ---> ResponseEntity<ResponseList> response;
+ 2. Create ResponseEntity ---> ResponseEntity<ResponseList> response;
  3. Create HttpHeaders ---> HttpHeaders headers = new HttpHeaders();
  4. Now set contentType, Authorization --->
  
